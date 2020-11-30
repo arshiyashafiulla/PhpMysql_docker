@@ -12,7 +12,7 @@ node{
     }
     stage('PUSH image to Docker Hub')
     {
-        withCredentials([string(credentialsId: 'arshiya@6', variable: 'DHPWD')]) 
+        withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
         {
             sh "docker login -u arshiyanoorain -p ${DHPWD}"
         }
